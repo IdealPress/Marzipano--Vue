@@ -9,15 +9,13 @@ import Vue from 'vue'
 var Marzipano = require('../../node_modules/marzipano')
 Vue.use(Marzipano)
 
-let element = null
-let viewer = null
-
 export default {
   name: 'HelloWorld',
   mounted: function () {
-    element = document.getElementById('test')
+    const element = document.getElementById('test')
     console.log(element)
-    viewer = new this.$marzipano.Viewer(element)
+    const viewer = new Marzipano.Viewer(element)
+    console.log(viewer)
   },
   data () {
     return {
